@@ -3,7 +3,7 @@
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordenar por</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem (click)="sortByLowerPrice([itemsToSort], $event)">Menor precio</button>
+        <button ngbDropdownItem (click)="sortByLowerPrice([itemsToSort])">Menor precio</button>
         <button ngbDropdownItem (click)="sortByHigherPrice([itemsToSort])">Mayor Precio</button>
         <button ngbDropdownItem (click)="sortByText([itemsToSort], 'title')">Título</button>
         <button ngbDropdownItem (click)="sortByText([itemsToSort], 'description')">Descripción</button>

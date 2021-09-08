@@ -34,4 +34,11 @@ describe('CardComponent', () => {
   const p = titleElement.querySelector('h2')!;
   expect(p.textContent).toEqual('Polaroid 635');
   });
+
+  it('should add to favorites', () => {
+    spyOn(component, 'addFavorite').and.callThrough();
+    let button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+    expect(component.addFavorite).toHaveBeenCalled();
+  });
 });
