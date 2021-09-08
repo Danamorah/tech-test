@@ -1,0 +1,27 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Productos Favoritos</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="favoritesList.length<=0; else elseBlock">Agrega productos favoritos</div>
+    <ng-template #elseBlock>
+      <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa nombre de favorito">
+      <button (click)="handleClear()">Clear input field</button>
+        <div *ngFor= "let favoriteItem of favoritesList |filter:searchTerm">
+      <div class="card-product">
+        <div class="image-container"><img src={{favoriteItem.image}} alt="favoriteItem.title" height=""></div>
+        <p #titleWord> {{favoriteItem.title}}</p>
+        <button (click)="removeFavorite(titleWord)">eliminar de favoritos</button>
+      </div>
+    </div>
+    </ng-template>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>
+
+<button class="btn secondary-btn mb-2 mr-2" (click)="openModal(content)">Favoritos</button>

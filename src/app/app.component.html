@@ -1,0 +1,40 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    height="40"
+    alt="Wallapop Logo"
+    src="https://es.wallapop.com/images/icons/ic-logo-web.svg"
+  />
+  <span>Item Manager</span>
+    <div class="spacer"></div>
+</div>
+<div class="content" role="main">
+  <div class="action-bar">
+      <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa datos del producto">
+    <!-- Dropdown -->
+  <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
+  <!-- Favorite Modal -->
+    <app-modal-favorite></app-modal-favorite>
+  </div>
+  <!-- List of items -->
+  <div>
+    <app-card [entryItem]= "item"
+    *ngFor="let item of loadList |filter:searchTerm">
+    </app-card>
+  </div>
+  <!-- Load More -->
+  <div class="paginator">
+  <div *ngIf="loadList.length>=listItemsLength; else elseBlock">Se han cargado todos los productos</div>
+  <ng-template #elseBlock>
+    <button  class="btn secondary-btn" (click)="loadMore()">
+      Ver Más Productos
+    </button>
+  </ng-template>
+  </div>
+  <!-- Footer -->
+  <footer>
+  </footer>
+</div>
+
+

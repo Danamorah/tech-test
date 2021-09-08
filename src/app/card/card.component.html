@@ -1,0 +1,14 @@
+<div class="card-product">
+  <div class="image-container">
+    <img src={{entryItem?.image}} alt="entryItem.title">
+  </div>
+  <div class="text-content">
+    <h2>{{entryItem.title}}</h2>
+    <p>€{{entryItem.price}}</p>
+    <p>{{entryItem.description}}</p>
+    <p>{{entryItem.email}}</p>
+  </div>
+  <div>
+    <button class="btn-favorite" (click)="addFavorite()"> Agregar a Favoritos</button>
+  </div>
+</div>
