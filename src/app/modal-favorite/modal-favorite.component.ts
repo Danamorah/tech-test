@@ -27,8 +27,4 @@ export class ModalFavoriteComponent implements OnInit {
     const index = this.favoritesList.findIndex(item => item.title === title.innerText);
     this.favoritesList.splice( index, 1);
   }
-
-   handleClear(){
-    this.searchTerm = '';
-  }
 }

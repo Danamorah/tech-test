@@ -36,9 +36,8 @@ export class AppComponent implements OnInit {
   );
   }
 
-    loadMore() {
+  public loadMore() {
     const nextPage = this.loadList.length
-    console.log("list",this.listItems.items.length);
     this.loadList.push(...this.listItems.items.slice(nextPage, nextPage + 5))
   }
 }

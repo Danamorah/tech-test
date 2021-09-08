@@ -9,7 +9,6 @@
     <div *ngIf="favoritesList.length<=0; else elseBlock">Agrega productos favoritos</div>
     <ng-template #elseBlock>
       <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa nombre de favorito">
-      <button (click)="handleClear()">Clear input field</button>
         <div *ngFor= "let favoriteItem of favoritesList |filter:searchTerm">
       <div class="card-product">
         <div class="image-container"><img src={{favoriteItem.image}} alt="favoriteItem.title" height=""></div>
