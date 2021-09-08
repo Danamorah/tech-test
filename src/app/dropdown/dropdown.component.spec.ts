@@ -22,4 +22,50 @@ describe('DropdownComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should sort by lower price', () => {
+    const items = [[{
+        price: "640"
+      },
+      {
+        price: "500"
+      }
+    ]]
+    component.sortByLowerPrice(items);
+    expect(component).toBeTruthy();
+  });
+
+  it('should sort by higher price', () => {
+  const items = [[{
+      price: "640"
+    },
+    {
+      price: "500"
+    }
+  ]]
+  component.sortByHigherPrice(items);
+  expect(component).toBeTruthy();
+  });
+
+  it('should sort by text', () => {
+  const items = [[{
+      title: 'Polaroid 635',
+      price: "640"
+    },
+    {
+      title: 'Iphone 6s',
+      price: "500"
+    },
+    {
+      title: 'Zapato',
+      price: "500"
+    },
+    {
+      title: 'Zapato',
+      price: "500"
+    }
+  ]]
+  component.sortByText(items, 'title');
+  expect(component).toBeTruthy();
+  });
 });

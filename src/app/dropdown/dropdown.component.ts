@@ -1,5 +1,4 @@
-import { Component, Input, Inject, Renderer2, ViewChild, ElementRef } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -8,15 +7,11 @@ import { DOCUMENT } from '@angular/common';
 })
 export class DropdownComponent {
   @Input ()itemsToSort: any
-  // title: string = 'title';
-  // description: string = ;
-  // email: string;
-  @ViewChild("myButton") myButton: ElementRef;
-  constructor(private renderer: Renderer2){
+  constructor(){
   }
 
 
-  sortByLowerPrice(items: any, event: Event): void {
+  sortByLowerPrice(items: any): void {
     items[0].sort((a:any, b:any) => Number(a.price) - Number(b.price));
   }
 

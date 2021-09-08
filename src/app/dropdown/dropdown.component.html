@@ -3,11 +3,11 @@
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ordenar por</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem  #lower id="lower" (click)="sortByLowerPrice([itemsToSort], $event)">Menor precio</button>
-        <button ngbDropdownItem  #higher id="higher" (click)="sortByHigherPrice([itemsToSort])">Mayor Precio</button>
-        <button ngbDropdownItem  #higher id="higher" (click)="sortByText([itemsToSort], 'title')">Título</button>
-        <button ngbDropdownItem  #higher id="higher" (click)="sortByText([itemsToSort], 'description')">Descripción</button>
-        <button ngbDropdownItem  #higher id="higher" (click)="sortByText([itemsToSort], 'email')">Email</button>
+        <button ngbDropdownItem (click)="sortByLowerPrice([itemsToSort], $event)">Menor precio</button>
+        <button ngbDropdownItem (click)="sortByHigherPrice([itemsToSort])">Mayor Precio</button>
+        <button ngbDropdownItem (click)="sortByText([itemsToSort], 'title')">Título</button>
+        <button ngbDropdownItem (click)="sortByText([itemsToSort], 'description')">Descripción</button>
+        <button ngbDropdownItem (click)="sortByText([itemsToSort], 'email')">Email</button>
       </div>
     </div>
   </div>
