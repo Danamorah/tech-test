@@ -22,4 +22,11 @@ describe('ModalFavoriteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should open modal when is clicked', () => {
+    spyOn(component, 'openModal').and.callThrough();
+    let button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+    expect(component.openModal).toHaveBeenCalled();
+  });
 });
