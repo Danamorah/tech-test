@@ -5,10 +5,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './card/card.component';
-import { ModalFavoriteComponent } from './modal-favorite/modal-favorite.component';
+import { CardComponent } from './components/card/card.component';
+import { ModalFavoriteComponent } from './components/modal-favorite/modal-favorite.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [

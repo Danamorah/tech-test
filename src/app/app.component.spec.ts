@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
-import { ItemsService } from './items.service';
+import { ItemsService } from './core/services/items-service/items.service';
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({name: 'filter'})

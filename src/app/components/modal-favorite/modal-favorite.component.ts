@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoriteService } from '../favorite.service';
+import { FavoriteService } from '../../core/services/favorite-service/favorite.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({

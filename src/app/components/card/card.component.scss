@@ -1,0 +1,61 @@
+.card-product {
+  position: relative;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);
+  transition: all .15s ease;
+  float: left;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 1px rgb(0 0 0 / 2%), 0 0 4px 1px rgb(0 0 0 / 5%);
+  transition: box-shadow .25s ease;
+  margin: 6px;
+
+  .image-container {
+    height: 253px;
+    padding: 4px 4px 0;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+
+  .text-content {
+    padding: 6px;
+
+    .description {
+      position: relative;
+      overflow: hidden;
+      color: #607D8B;
+      font-size: .875rem;
+      height: 85px;
+      word-wrap: break-word;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      padding: 4px;
+    }
+  }
+
+  .btn-favorite {
+    width: 100%;
+  }
+
+  .btn-favorite:disabled {
+    opacity: 0.3;
+  }
+  .secondary-btn:disabled:hover{
+    background-color:transparent;
+    color: rgb(16, 163, 146);
+  }
+}
+
+
+

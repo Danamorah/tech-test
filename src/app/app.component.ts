@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemsService } from './items.service'
+import { Component, OnInit, Output } from '@angular/core';
+import { ItemsService } from './core/services/items-service/items.service'
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
   public listItems:any = [];
   public loadList: any = []
   public listItemsLength: any;
-  searchTerm:string;
+  public favoritesList:Array<any> = []
+  public searchTerm:string;
 
   constructor(private ItemsService: ItemsService,){
 
