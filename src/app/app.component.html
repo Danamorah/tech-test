@@ -1,4 +1,3 @@
-<!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
     width="40"
@@ -11,19 +10,15 @@
 </div>
 <div class="content" role="main">
   <div class="action-bar">
-      <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa datos del producto">
-    <!-- Dropdown -->
-  <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
-  <!-- Favorite Modal -->
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa datos del producto">
+    <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
     <app-modal-favorite></app-modal-favorite>
   </div>
-  <!-- List of items -->
   <div>
-    <app-card [entryItem]= "item"
+    <app-card [entryItem]= "item "
     *ngFor="let item of loadList |filter:searchTerm">
     </app-card>
   </div>
-  <!-- Load More -->
   <div class="paginator">
   <div *ngIf="loadList.length>=listItemsLength; else elseBlock">Se han cargado todos los productos</div>
   <ng-template #elseBlock>
@@ -32,8 +27,8 @@
     </button>
   </ng-template>
   </div>
-  <!-- Footer -->
   <footer>
+    made with love by <a href="http://www.dmorah.com" blank target="_blank"> Daniela Mora</a>
   </footer>
 </div>
 
