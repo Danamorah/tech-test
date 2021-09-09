@@ -11,16 +11,18 @@
 <div class="content" role="main">
   <div class="action-bar">
     <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa datos del producto">
-    <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
-    <app-modal-favorite [favoritesList]="favoritesList"></app-modal-favorite>
+    <div class="action-group">
+      <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
+      <app-modal-favorite [favoritesList]="favoritesList"></app-modal-favorite>
+    </div>
   </div>
-  <div>
+  <div class="card-container">
     <app-card [entryItem]= "item " [favoritesList]="favoritesList"
     *ngFor="let item of loadList |filter:searchTerm">
     </app-card>
   </div>
   <div class="paginator">
-  <div *ngIf="loadList.length>=listItemsLength; else elseBlock">Se han cargado todos los productos</div>
+  <div *ngIf="loadList.length>=listItemsLength; else elseBlock"><p class="message">Se han cargado todos los productos</p></div>
   <ng-template #elseBlock>
     <button  class="btn secondary-btn" (click)="loadMore()">
       Ver Más Productos

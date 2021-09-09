@@ -55,11 +55,23 @@
   justify-content: right;
   margin-bottom: 30px;
   margin-top: 40px;
+
+  .action-group {
+    display: flex;
+  }
 }
 
 svg.material-icons {
   height: 24px;
   width: auto;
+}
+
+.paginator {
+  margin: 20px;
+}
+.message{
+  font-size: 1.5em;
+  color: #10A392;
 }
 
 footer {
@@ -80,9 +92,30 @@ footer {
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+  .action-bar {
+    display: grid;
+    justify-content: stretch;
 
-}
+    input {
+      margin-bottom: 12px;
+    }
 
-@media screen and (max-width: 575px) {
+    .action-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
+  app-modal-favorite {
+    width: 100%;
+
+    .secondary-btn {
+      width: 100%;
+    }
+  }
+
+  .card-container {
+    display: grid;
+  }
 }

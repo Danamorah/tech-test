@@ -1,23 +1,31 @@
+.modal-body {
+  input {
+    margin: 10px 0px;
+  }
+}
+
 .card-product {
     position: relative;
-    //height: 420px;
     width: 220px;
     border-radius: 10px;
     box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%);
-    -webkit-transition: all .15s ease;
-    -moz-transition: all .15s ease;
-    -o-transition: all .15s ease;
     transition: all .15s ease;
     float: left;
     overflow: hidden;
     background-color: #fff;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     box-shadow: 0 0 4px 1px rgb(0 0 0 / 2%), 0 0 4px 1px rgb(0 0 0 / 5%);
-    -webkit-transition: box-shadow .25s ease;
-    -moz-transition: box-shadow .25s ease;
-    -o-transition: box-shadow .25s ease;
     transition: box-shadow .25s ease;
+    padding: 5px 6px;
+    margin: 6px;
+
+    .btn {
+      width: 100%;
+    }
+
+    p {
+      margin-top: 5px;
+    }
 
   .image-container {
     height: 253px;
@@ -51,4 +59,8 @@
   border-color:#13C1AC;
 }
 
-
+@media screen and (max-width: 767px) {
+  .secondary-btn {
+    width: 100%;
+  }
+}
