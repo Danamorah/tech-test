@@ -18,10 +18,15 @@ describe('CardComponent', () => {
       title: 'Polaroid 635',
   };
 
+  const favoritesList = [{
+      title: 'Iphone 6',
+  }];
+
   beforeEach(() => {
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
     component.entryItem = entryItem;
+    component.favoritesList = favoritesList;
     fixture.detectChanges();
   });
 
@@ -31,7 +36,7 @@ describe('CardComponent', () => {
 
   it('should have a title', () => {
   const titleElement: HTMLElement = fixture.nativeElement;
-  const p = titleElement.querySelector('h2')!;
+  const p = titleElement.querySelector('h6')!;
   expect(p.textContent).toEqual('Polaroid 635');
   });
 

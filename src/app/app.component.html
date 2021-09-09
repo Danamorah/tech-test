@@ -12,10 +12,10 @@
   <div class="action-bar">
     <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Ingresa datos del producto">
     <app-dropdown [itemsToSort]= "loadList"></app-dropdown>
-    <app-modal-favorite></app-modal-favorite>
+    <app-modal-favorite [favoritesList]="favoritesList"></app-modal-favorite>
   </div>
   <div>
-    <app-card [entryItem]= "item "
+    <app-card [entryItem]= "item " [favoritesList]="favoritesList"
     *ngFor="let item of loadList |filter:searchTerm">
     </app-card>
   </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ItemsService } from './core/services/items-service/items.service'
+import { FavoriteService } from './core/services/favorite-service/favorite.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { ItemsService } from './core/services/items-service/items.service'
 })
 export class AppComponent implements OnInit {
 
-  title = 'wallapop-spa';
+  title = 'item-manager';
 
   public listItems:any = [];
   public loadList: any = []
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit {
   public favoritesList:Array<any> = []
   public searchTerm:string;
 
-  constructor(private ItemsService: ItemsService,){
+  constructor(private ItemsService: ItemsService, private favoriteService: FavoriteService){
 
   }
 
@@ -24,6 +25,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.getItems();
+    this.favoriteService.favoriteTrigger.subscribe( data => {
+      this.favoritesList.push(data);
+    })
   }
 
   public getItems() {
@@ -33,8 +37,7 @@ export class AppComponent implements OnInit {
       this.listItemsLength = this.listItems.items.length;
       this.loadList = this.listItems.items.slice(0,5)
     },
-  error => { console.log(error)}
-  );
+    error => { console.log(error)});
   }
 
   public loadMore() {

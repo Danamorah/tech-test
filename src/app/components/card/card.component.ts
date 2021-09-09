@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { FavoriteService } from '../../core/services/favorite-service/favorite.service';
-import { ModalFavoriteComponent } from '../modal-favorite/modal-favorite.component'
 
 @Component({
   selector: 'app-card',
@@ -9,16 +8,13 @@ import { ModalFavoriteComponent } from '../modal-favorite/modal-favorite.compone
 })
 export class CardComponent {
   @Input ()entryItem: any;
-  @Input ()favoriteList: any;
+  @Input ()favoritesList: any;
   public image:string = '';
 
   constructor(private favoriteService: FavoriteService) { }
 
 
-  ngOnInit(): void {
-    console.log("fav", this.favoriteList)
-  }
-
+  checkFavorite = (elem:any) => elem.title === this.entryItem.title
   addFavorite(){
     this.favoriteService.favoriteTrigger.emit(
       {

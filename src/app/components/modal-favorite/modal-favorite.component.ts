@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FavoriteService } from '../../core/services/favorite-service/favorite.service';
+import { Component, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
@@ -7,17 +6,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
   templateUrl: './modal-favorite.component.html',
   styleUrls: ['./modal-favorite.component.scss']
 })
-export class ModalFavoriteComponent implements OnInit {
+export class ModalFavoriteComponent {
 
-  constructor(private favoriteService: FavoriteService, private modal: NgbModal) { }
-  public favoritesList:Array<any> = []
+  constructor(private modal: NgbModal) { }
+  @Input() favoritesList:Array<any> = []
   searchTerm:string;
 
-  ngOnInit(): void {
-    this.favoriteService.favoriteTrigger.subscribe( data => {
-      this.favoritesList.push(data);
-    })
-  }
 
   openModal(content: any) {
     this.modal.open(content, { centered: true });

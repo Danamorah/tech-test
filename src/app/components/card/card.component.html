@@ -7,6 +7,6 @@
     <h6>{{entryItem.title}}</h6>
     <p class="description">{{entryItem.description}}</p>
     <p>{{entryItem.email}}</p>
-    <button  class="btn-favorite btn secondary-btn" (click)="addFavorite()"> Agregar a Favoritos</button>
+    <button [disabled]="favoritesList.some(checkFavorite)" class="btn-favorite btn secondary-btn" (click)="addFavorite()"> Agregar a Favoritos</button>
   </div>
 </div>
