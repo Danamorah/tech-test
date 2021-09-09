@@ -4,8 +4,9 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This project is an item manager
-To get a local copy up and running follow these simple example steps.
+This project is an Item Manager
+
+To get a local copy up and running follow these steps.
 
 ## Technologies
 Project is created with:
@@ -14,7 +15,7 @@ Project is created with:
 * Node
 * NPM
 * HTML
-* SASS
+* SCSS
 
 ### Prerequisites
 
@@ -48,7 +49,9 @@ If you've installed the dependencies then can follow the next steps.
 ```
 ng serve
 ```
-Server is listening on localhost:4200, open your browser on http://localhost:4200/
+Server is listening on localhost:4200, open your browser on http://localhost:4200/ navigate and explore the app
+
+
 
 
 ### 2) Run tests:
