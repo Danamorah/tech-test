@@ -62,6 +62,21 @@ svg.material-icons {
   width: auto;
 }
 
+footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #10A392;
+  color: white;
+  font-weight: 600;
+
+  a {
+    color: #FDF06F;
+    font-weight: 700;
+  }
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
