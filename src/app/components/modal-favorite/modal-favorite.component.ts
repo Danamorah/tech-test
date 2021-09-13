@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { Item } from '../../item';
 
 @Component({
   selector: 'app-modal-favorite',
@@ -9,7 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
 export class ModalFavoriteComponent {
 
   constructor(private modal: NgbModal) { }
-  @Input() favoritesList:Array<any> = []
+  @Input() favoritesList: Item[] = []
   searchTerm:string;
 
 

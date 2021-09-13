@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemsService } from './core/services/items-service/items.service'
 import { FavoriteService } from './core/services/favorite-service/favorite.service';
 
